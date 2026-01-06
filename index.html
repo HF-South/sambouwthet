@@ -1,1 +1,227 @@
-hello
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Klus- & Onderhoudsservice</title>
+  <meta name="description" content="Betrouwbare klusjesman voor bouw, renovatie en onderhoud. Vraag vandaag nog een vrijblijvende offerte aan." />
+  <style>
+    :root {
+      --primary: #1f7a8c;
+      --secondary: #022b3a;
+      --accent: #e1e5f2;
+      --light: #ffffff;
+      --dark: #0b1f2a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #222;
+      line-height: 1.6;
+      background: #f5f7fa;
+    }
+    header {
+      background: linear-gradient(rgba(2,43,58,0.75), rgba(2,43,58,0.75)), url('https://images.unsplash.com/photo-1581092337765-6a1b3a4c3c5c?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      color: var(--light);
+      padding: 80px 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin-top: 0;
+      font-size: 2.5rem;
+    }
+    header p {
+      max-width: 680px;
+      margin: 10px auto 25px;
+      font-size: 1.15rem;
+    }
+    .btn-primary {
+      display: inline-block;
+      background: var(--primary);
+      color: var(--light);
+      padding: 12px 22px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 600;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    }
+    nav {
+      background: var(--secondary);
+      color: var(--light);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    nav a.logo {
+      color: var(--light);
+      font-weight: 800;
+      text-decoration: none;
+      font-size: 1.2rem;
+      letter-spacing: .5px;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 16px;
+    }
+    nav ul li a {
+      color: var(--light);
+      text-decoration: none;
+      font-size: .95rem;
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    .grid {
+      display: grid;
+      gap: 24px;
+    }
+    .services {
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+    .card {
+      background: var(--light);
+      padding: 22px;
+      border-radius: 16px;
+      box-shadow: 0 10px 26px rgba(0,0,0,0.06);
+    }
+    .card h3 { margin-top: 0; }
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+    }
+    .about img {
+      width: 100%;
+      border-radius: 16px;
+      object-fit: cover;
+    }
+    form {
+      background: var(--light);
+      padding: 22px;
+      border-radius: 16px;
+      box-shadow: 0 6px 20px rgba(0,0,0,.05);
+    }
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      margin-top: 6px;
+      border-radius: 10px;
+      border: 1px solid #cfd8dc;
+      font-size: .95rem;
+    }
+    label { font-weight: 600; font-size: .9rem; }
+    button {
+      background: var(--primary);
+      color: var(--light);
+      padding: 12px 20px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 1rem;
+      margin-top: 10px;
+    }
+    footer {
+      background: var(--secondary);
+      color: var(--light);
+      text-align: center;
+      padding: 18px 12px;
+      font-size: .9rem;
+    }
+    @media(max-width: 800px){
+      .about{grid-template-columns:1fr}
+      header h1{font-size:2rem}
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#" class="logo">Klus- & Onderhoudsservice</a>
+    <ul>
+      <li><a href="#diensten">Diensten</a></li>
+      <li><a href="#over">Over mij</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>Betrouwbare vakman voor al uw klussen</h1>
+    <p>Bouw, renovatie en onderhoud. Particulier én zakelijk. Snel, netjes en tegen een eerlijke prijs.</p>
+    <a class="btn-primary" href="#contact">Vraag een offerte aan</a>
+  </header>
+
+  <section id="diensten">
+    <h2>Diensten</h2>
+    <div class="grid services">
+      <div class="card">
+        <h3>Verbouw & Renovatie</h3>
+        <p>Badkamers, keukens, wanden plaatsen, vloeren leggen en meer.</p>
+      </div>
+      <div class="card">
+        <h3>Onderhoud</h3>
+        <p>Klein en groot onderhoud binnen en buiten uw woning of bedrijf.</p>
+      </div>
+      <div class="card">
+        <h3>Timmerwerk</h3>
+        <p>Schuttingen, overkappingen, maatkasten en reparaties.</p>
+      </div>
+      <div class="card">
+        <h3>Overige klussen</h3>
+        <p>Vragen over andere werkzaamheden? Neem gerust contact op.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="over">
+    <h2>Over mij</h2>
+    <div class="about">
+      <div>
+        <p>Ik ben een ervaren klusser met oog voor detail en liefde voor het vak. Ik help u graag met uiteenlopende klussen: van kleine reparaties tot complete verbouwingen. Transparante communicatie, meedenken en netjes werken staan bij mij centraal.</p>
+        <ul>
+          <li>+10 jaar ervaring</li>
+          <li>Vrijblijvende offerte</li>
+          <li>Heldere afspraken</li>
+        </ul>
+      </div>
+      <img src="https://images.unsplash.com/photo-1592813630417-cc9188f66e45?auto=format&fit=crop&w=1200&q=80" alt="Klusser aan het werk" />
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact & Offerte</h2>
+    <p>Vul het formulier in en ik neem zo snel mogelijk contact met u op.</p>
+    <form onsubmit="event.preventDefault(); alert('Bedankt! Uw bericht is verzonden.'); this.reset();">
+      <label>Naam
+        <input type="text" required />
+      </label>
+      <label>E‑mail
+        <input type="email" required />
+      </label>
+      <label>Telefoonnummer
+        <input type="tel" />
+      </label>
+      <label>Bericht
+        <textarea rows="5" required></textarea>
+      </label>
+      <button type="submit">Versturen</button>
+    </form>
+  </section>
+
+  <footer>
+    © <span id="year"></span> Klus- & Onderhoudsservice — Alle rechten voorbehouden
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
