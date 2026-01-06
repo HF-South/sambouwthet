@@ -159,69 +159,74 @@
     .mobile-nav-toggle{display:none;}
     .mobile-open ul{display:flex;flex-direction:column;gap:12px;padding-top:12px;}
 </style>
-</head>
-<body>
-  <nav id="nav">
-    <a href="#" class="logo">Sam bouwt het</a>
-    <span class="mobile-nav-toggle" onclick="document.getElementById('nav').classList.toggle('mobile-open')">☰</span>
-    <ul>
-      <li><a href="#diensten">Diensten</a></li>
-      <li><a href="#over">Over mij</a></li>
-      <li><a href="#prijzen">Prijzen</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
 
-  <header>
-    <h1>Sam bouwt het – vakman voor al uw klussen</h1>
-    <p>Schilderwerk, timmerwerk en diverse klusjes in omgeving Vlissingen, Breda, Etten-Leur en omstreken. Snel, netjes en tegen een eerlijke prijs.</p>
-    <a class="btn-primary" href="#contact">Vraag een offerte aan</a>
-  </header>
+  <style>
+    /* Futuristic neon + glass look */
+    .neo-bg{background: radial-gradient(circle at top,#0f1c2e,#020b14 60%);min-height:100vh;color:white;}
+    .gradient-title{background:linear-gradient(135deg,#5ee7df,#b490ca);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-size:2.4rem;margin-bottom:6px}
+    .subtitle{opacity:.9}
+    .card-wrapper{display:flex;justify-content:center;padding-top:30px}
+    .neo-card{background:rgba(255,255,255,.06);backdrop-filter:blur(14px);border-radius:22px;padding:28px 22px;box-shadow:0 0 25px rgba(94,231,223,.25);text-align:center;max-width:420px;width:92%}
+    .chip{width:60px;height:40px;border-radius:8px;margin:14px auto;background:linear-gradient(135deg,#ffd54f,#ff8a65)}
+    .neo-buttons{display:flex;gap:10px;justify-content:center;margin-top:12px;flex-wrap:wrap}
+    .btn-outline{border:1px solid #5ee7df;padding:10px 18px;border-radius:12px;color:white;text-decoration:none}
+    .glass-section{max-width:1050px;margin:40px auto;padding:10px 16px}
+    .glass{background:rgba(255,255,255,.08);backdrop-filter:blur(10px);border-radius:20px}
+    #photo-grid img{width:100%;border-radius:18px
+<body class="neo-bg">
 
-  <section id="diensten">
-    <h2>Diensten</h2>
-    <p>Ik werk in omgeving Vlissingen, Breda, Etten-Leur en omstreken.</p>
-    <div class="grid services">
-      <div class="card">
-        <h3>Schilderwerk</h3>
-        <p>Binnen- en buitenschilderwerk, kozijnen, deuren en wanden.</p>
+  <div class="card-wrapper">
+    <div class="neo-card">
+      <h1 class="gradient-title">Sam bouwt het</h1>
+      <p class="subtitle">Schilderwerk • Timmerwerk • Klusservice</p>
+      <p class="region">Vlissingen • Breda • Etten-Leur en omstreken</p>
+
+      <div class="chip"></div>
+
+      <div class="neo-buttons">
+        <a href="#contact" class="btn-primary">Offerte aanvragen</a>
+        <a href="#diensten" class="btn-outline">Diensten</a>
       </div>
-      <div class="card">
+    </div>
+  </div>
+
+  <section id="diensten" class="glass-section">
+    <h2>Wat ik voor je doe</h2>
+    <div class="grid services">
+      <div class="card glass">
+        <h3>Schilderwerk</h3>
+        <p>Binnen & buiten, strak en duurzaam resultaat.</p>
+      </div>
+      <div class="card glass">
         <h3>Timmerwerk</h3>
         <p>Reparaties, maatwerk en kleine verbouwingen.</p>
       </div>
-      <div class="card">
-        <h3>Onderhoud & Reparatie</h3>
-        <p>Kleine klussen in en om huis, ook voor bedrijven.</p>
-      </div>
-      <div class="card">
-        <h3>Overige klussen</h3>
-        <p>Neem contact op voor maatwerk of vragen over andere werkzaamheden.</p>
+      <div class="card glass">
+        <h3>Klusservice</h3>
+        <p>Allerlei klussen in en rondom huis of bedrijf.</p>
       </div>
     </div>
   </section>
 
-  <section id="over">
-    <h2>Over Sam bouwt het</h2>
-    <div class="about">
-      <div>
-        <p>Ik ben Sam en help particulieren en bedrijven met schilderwerk, timmerwerk en diverse klusjes. Ik denk graag mee, werk netjes en kom afspraken na.</p>
-        <ul>
-          <li>Werkgebied: Vlissingen, Breda, Etten-Leur en omstreken</li>
-          <li>Transparante prijzen en vrijblijvende offerte</li>
-          <li>Netjes, betrouwbaar en snel</li>
-        </ul>
-      </div>
-      <img src="https://images.unsplash.com/photo-1592813630417-cc9188f66e45?auto=format&fit=crop&w=1200&q=80" alt="Sam aan het werk" />
-    </div>
+  <section id="gallery" class="glass-section">
+    <h2>Projectfoto’s</h2>
+    <p>Nieuwe foto’s die je toevoegt aan de map <strong>pictures/</strong> verschijnen hier automatisch.</p>
+    <div id="photo-grid" class="grid services"></div>
   </section>
 
-  <section id="contact">
+  <section id="tiktok" class="glass-section">
+    <h2>Mijn TikTok projecten</h2>
+    <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@jeweetzelfwel" data-unique-id="jeweetzelfwel" data-embed-type="creator">
+      <section>Laadt TikTok…</section>
+    </blockquote>
+    <script async src="https://www.tiktok.com/embed.js"></script>
+  </section>
+
+  <section id="contact" class="glass-section">
     <h2>Contact & Offerte</h2>
-    <p>Vul het formulier in en ik neem zo snel mogelijk contact met je op. Of mail direct naar <strong>samdoethetvoorjou@gmail.com</strong>.</p>
+    <p>Mail: <strong>samdoethetvoorjou@gmail.com</strong></p>
 
-    <!-- Professioneel verzendformulier via Formspree -->
-    <form action="https://formspree.io/f/your-id" method="POST">
+    <form action="https://formspree.io/f/your-id" method="POST" class="glass">
       <label>Naam
         <input name="naam" type="text" required />
       </label>
@@ -239,12 +244,37 @@
     </form>
   </section>
 
+  <footer>
+    © <span id="year"></span> Sam bouwt het — Futuristisch klus-visitekaartje
+  </footer
+r>
+    © <span id="year"></span> Sam bouwt het — Alle rechten voorbehouden
+  </footer>
+
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
   <section id="prijzen">
     <h2>Prijzen & Offerte</h2>
-    <p>Iedere klus is anders. Ik werk met eerlijke, transparante prijzen. Vraag een vrijblijvende offerte aan via het contactformulier.</p>
+    <p>Iedere klus is and<script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Auto gallery loader for pictures folder (name 1..40)
+    const grid = document.getElementById('photo-grid');
+    if(grid){
+      for(let i=1;i<=40;i++){
+        const img = new Image();
+        img.src = 'pictures/' + i + '.jpg';
+        img.onload = () => {
+          const div = document.createElement('div');
+          div.className='card glass';
+          div.appendChild(img);
+          grid.appendChild(div);
+        }
+      }
+    }
+</script>
+</body> werk met eerlijke, transparante prijzen. Vraag een vrijblijvende offerte aan via het contactformulier.</p>
     <ul>
       <li>Schilderwerk – prijs op aanvraag</li>
       <li>Timmerwerk – prijs op aanvraag</li>
@@ -255,13 +285,11 @@
   <section id="tiktok">
     <h2>Mijn recente projecten (TikTok)</h2>
     <p>Bekijk hieronder automatisch mijn nieuwste TikTok-video’s.</p>
-    <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@jeweetzelfwel" data-unique-id="yourusername" data-embed-type="creator">
+    <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@yourusername" data-unique-id="yourusername" data-embed-type="creator">
       <section>Laadt TikTok…</section>
     </blockquote>
     <script async src="https://www.tiktok.com/embed.js"></script>
   </section>
-<footer>
-    © <span id="year"></span> Sam bouwt het — Alle rechten voorbehouden
-  </footer>
+
 </body>
 </html>
