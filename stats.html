@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fleet Dashboard - Statistics</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<header>
+    <h1>Fleet Dashboard - Statistics</h1>
+    <a href="index.html" class="stats-link">View Ships</a>
+</header>
+
+<section class="stats">
+    <div class="stat"><h3 id="totalShips">0</h3><p>Total Ships</p></div>
+    <div class="stat"><h3 id="totalTonnage">0</h3><p>Total Tonnage</p></div>
+    <div class="stat"><h3 id="avgTonnage">0</h3><p>Average Tonnage</p></div>
+    <div class="stat"><h3 id="avgLength">0</h3><p>Average Length (m)</p></div>
+    <div class="stat"><h3 id="largestShip">-</h3><p>Largest Ship</p></div>
+    <div class="stat"><h3 id="smallestShip">-</h3><p>Smallest Ship</p></div>
+    <div class="stat"><h3 id="mostCommonOperator">-</h3><p>Most Common Operator</p></div>
+</section>
+
+<section class="chart-section">
+    <canvas id="operatorChart" width="600" height="300"></canvas>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
